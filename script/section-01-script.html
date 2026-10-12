@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اسكريبت فيديو سكشن 1 — المعاينة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f7f5f0; --card: #ffffff; --ink: #14213d; --muted: #5b6475;
+  --navy: #0f2a4f; --gold: #e0a51b; --gold-soft: #fbf1d6; --blue-soft: #e7eef8;
+  --line: #e4e0d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d1626; --card: #14213a; --ink: #eef1f7; --muted: #a3adbf;
+    --navy: #8fb4ec; --gold: #f2bd43; --gold-soft: #3a2f12; --blue-soft: #1c2d4b;
+    --line: #26375a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Noto Sans Arabic", "Cairo", "Segoe UI", Tahoma, sans-serif;
+  line-height: 1.9;
+}
+main { max-width: 860px; margin: 0 auto; padding: 32px 16px 80px; }
+header { border-bottom: 3px solid var(--gold); padding-bottom: 16px; margin-bottom: 24px; }
+h1 { font-size: 2rem; margin: 0; color: var(--navy); line-height: 1.4; }
+.subtitle { color: var(--muted); margin: 4px 0 0; }
+.stats { margin-top: 10px; color: var(--muted); font-size: .95rem; }
+.stats b { color: var(--ink); }
+h2 { color: var(--navy); font-size: 1.4rem; margin: 40px 0 12px; }
+ul { padding-inline-start: 22px; margin: 0; }
+li { margin: 4px 0; }
+.note { background: var(--blue-soft); border-radius: 10px; padding: 10px 14px; color: var(--muted); }
+.clip {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px; margin: 16px 0; break-inside: avoid;
+}
+.clip-head { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.num {
+  flex: none; background: var(--navy); color: var(--bg); font-weight: 700;
+  border-radius: 10px; padding: 2px 12px; font-size: 1.15rem; direction: ltr;
+}
+.clip-title { font-weight: 700; font-size: 1.15rem; flex: 1; }
+.dur { color: var(--muted); font-size: .85rem; direction: ltr; }
+.cue {
+  color: var(--muted); font-size: .9rem; border-inline-start: 3px solid var(--line);
+  padding-inline-start: 10px; margin: 0 0 12px;
+}
+.cue::before { content: "على الشاشة · "; font-weight: 700; }
+.say { font-size: 1.3rem; margin: 6px 0; }
+.say strong { color: var(--navy); }
+.pause {
+  display: inline-block; background: var(--gold-soft); color: var(--ink);
+  border: 1px dashed var(--gold); border-radius: 999px; padding: 2px 14px;
+  margin: 8px 0; font-weight: 700;
+}
+code { background: var(--blue-soft); border-radius: 4px; padding: 0 6px; direction: ltr; display: inline-block; }
+@media print { .clip { border-color: #ccc; } body { background: #fff; } }
+</style></head><body><main>
+<header>
+<h1>اسكريبت فيديو سكشن 1 — المعاينة</h1>
+<p class="subtitle">الإحصاء التطبيقي · SAT301</p>
+<div class="stats"><b>38</b> مقطع · المدة التقريبية للكلام <b dir="ltr">16:21</b> دقيقة</div>
+</header>
+<h2>قبل ما تسجل</h2>
+<ul>
+<li>كل مقطع عليه 🎙️ ورقم، سجّله في <strong>ملف لوحده</strong>، بالترتيب من 01 لحد 38.</li>
+<li>الأحسن تسمي كل ملف برقم المقطع (<code>01</code>، <code>02</code>، …). لو مش فاضي تسميهم، المهم تسجلهم بالترتيب ومتغيرش الأسامي اللي الموبايل بيديها.</li>
+<li>لو غلطت في مقطع، امسح الملف ده وسجّله تاني قبل ما تنتقل للي بعده.</li>
+<li>لما تلاقي ⏸️ اسكت <strong>3 ثواني كاملين</strong> وبعدين كمّل في نفس الملف. في المكان ده هيظهر عداد "وقّف وفكّر" على الشاشة.</li>
+<li>سطر "على الشاشة" <strong>مش للقراية</strong>، ده وصف للي هيظهر في الفيديو وانت بتتكلم.</li>
+<li>لو حبيت تغيّر كلمة لكلمة أريح ليك غيّرها عادي، بس خلي ترتيب الكلام زي ما هو عشان الصورة تمشي معاك.</li>
+<li>سجّل في مكان هادي، والموبايل على بعد شبر من بُقك، ويا ريت المروحة والتكييف يبقوا مقفولين.</li>
+<li>لما تخلص، اعمل للملفات كلها zip وابعتهولي.</li>
+</ul>
+<h2>الجزء الأول: البداية</h2>
+<section class="clip" id="clip-01">
+<div class="clip-head"><span class="num">🎙️ 01</span><span class="clip-title">الافتتاحية</span><span class="dur">~0:20</span></div>
+<p class="cue">على الشاشة: لوجو الجامعة، "SAT301 · الإحصاء التطبيقي"، والعنوان "المعاينة" وتحته "سكشن 1".</p>
+<p class="say">أهلًا بيكم يا جماعة في أول سكشن إحصاء تطبيقي.</p>
+<p class="say">موضوعنا النهارده اسمه <strong>المعاينة</strong>.</p>
+<p class="say">في الفيديو ده هنعمل تلات حاجات: هنراجع مع بعض أهم المفاهيم من المحاضرة، وبعدين نحل مثالين خطوة بخطوة، وفي الآخر نحل ستاشر سؤال اختيار من متعدد من أسئلة الفصل.</p>
+<p class="say">فهاتوا ورقة وقلم… ويلا بينا.</p>
+</section>
+<section class="clip" id="clip-02">
+<div class="clip-head"><span class="num">🎙️ 02</span><span class="clip-title">سؤال من المطبخ</span><span class="dur">~0:12</span></div>
+<p class="cue">على الشاشة: خلفية كحلي، والسؤال "إزاي تعرف إن حلة الشوربة ملحها مظبوط؟"، وحلة بيطلع منها بخار.</p>
+<p class="say">قبل ما نبدأ، عايز أسألك سؤال من المطبخ.</p>
+<p class="say">تخيّل إن مامتك عاملة حلة شوربة كبيرة، وعايزة تتأكد إن الملح مظبوط.</p>
+<p class="say">هل هتشرب الحلة كلها عشان تعرف؟</p>
+<p class="say">أكيد لأ!</p>
+</section>
+<section class="clip" id="clip-03">
+<div class="clip-head"><span class="num">🎙️ 03</span><span class="clip-title">المعلقة</span><span class="dur">~0:24</span></div>
+<p class="cue">على الشاشة: معلقة بتقلّب الحلة، وبعدين بتطلع بشوية شوربة، وعلامة ✓ على الحلة كلها. وبعدها معلقة من على الوش عليها ✗.</p>
+<p class="say">اللي بيحصل إنها بتقلّب الحلة كويس… وتدوق معلقة واحدة بس… ومن طعم المعلقة دي بتحكم على الحلة كلها.</p>
+<p class="say">طب ليه بتقلّب الأول؟ عشان المعلقة تبقى شبه الحلة بالظبط.</p>
+<p class="say">لو داقت من على الوش من غير تقليب، ممكن المعلقة تطلع مالحة أوي أو مسيخة… وتحكم حكم غلط على الحلة كلها.</p>
+<p class="say">الفكرة البسيطة دي… هي بالظبط موضوعنا النهارده: <strong>المعاينة</strong>.</p>
+</section>
+<section class="clip" id="clip-04">
+<div class="clip-head"><span class="num">🎙️ 04</span><span class="clip-title">الحلة والمعلقة في الإحصاء</span><span class="dur">~0:33</span></div>
+<p class="cue">على الشاشة: جدول بيتبني صف صف: الحلة ← المجتمع (أزرق)، المعلقة ← العينة (دهبي)، ملوحة الحلة ← المعلمة (أزرق)، ملوحة المعلقة ← الإحصاءة (دهبي)، التقليب ← الاختيار العشوائي.</p>
+<p class="say">تعالوا نترجم المطبخ ده لإحصاء.</p>
+<p class="say">الحلة كلها، دي اسمها <strong>المجتمع</strong>، أو الـ Population.</p>
+<p class="say">المعلقة اللي دقناها، دي <strong>العينة</strong>، أو الـ Sample.</p>
+<p class="say">ملوحة الحلة كلها اسمها <strong>المعلمة</strong>، أو الـ Parameter… وهي موجودة فعلًا، بس إحنا مش عارفينها.</p>
+<p class="say">وملوحة المعلقة اسمها <strong>الإحصاءة</strong>، أو الـ Statistic… ودي إحنا عارفينها، لأننا دقناها بنفسنا.</p>
+<p class="say">والتقليب قبل ما ندوق، ده <strong>الاختيار العشوائي</strong>، اللي بيخلي العينة تمثل المجتمع.</p>
+<p class="say">وخدوا بالكم من الألوان: الأزرق دايمًا للمجتمع والمعلمة، والدهبي للعينة والإحصاءة. الألوان دي هتفضل معانا طول الفيديو.</p>
+</section>
+<h2>الجزء التاني: مراجعة سريعة</h2>
+<section class="clip" id="clip-05">
+<div class="clip-head"><span class="num">🎙️ 05</span><span class="clip-title">المجتمع الإحصائي</span><span class="dur">~0:09</span></div>
+<p class="cue">على الشاشة: كارت "1 · مراجعة سريعة"، وبعده تعريف المجتمع، والمجتمع بيتقسم لكارتين: محدود وغير محدود.</p>
+<p class="say">نبدأ المراجعة بأول مفهوم: <strong>المجتمع الإحصائي</strong>.</p>
+<p class="say">المجتمع هو <strong>جميع</strong> العناصر اللي بندرس خصائصها.</p>
+<p class="say">والمجتمع نوعين: مجتمع <strong>محدود</strong>، ومجتمع <strong>غير محدود</strong>.</p>
+</section>
+<section class="clip" id="clip-06">
+<div class="clip-head"><span class="num">🎙️ 06</span><span class="clip-title">محدود ولا غير محدود؟</span><span class="dur">~0:44</span></div>
+<p class="cue">على الشاشة: كارت "المحدود · Finite" بأمثلته، وبعده كارت "غير المحدود · Infinite" بأمثلته، وفي الآخر السؤال الكبير "أقدر أعدّه؟".</p>
+<p class="say">المجتمع <strong>المحدود</strong> عدد وحداته محدود، وأقدر أعدّه.</p>
+<p class="say">زي عدد الطلاب المسجلين في جامعة، أو عدد المدرسين في مدرسة، أو عدد الآلات في مصنع.</p>
+<p class="say">أما المجتمع <strong>غير المحدود</strong>، فعدد وحداته مالوش آخر، ومينفعش يتعد.</p>
+<p class="say">زي عدد النجوم في السما، أو السمك في المية، أو الخلايا في جسم الإنسان.</p>
+<p class="say">وفيه مثال مهم جدًا: الأعداد العشرية بين واحد واتنين. ليه غير محدودة؟ لأن بين أي رقمين فيه عدد لا نهائي من الكسور… واحد وعُشر، واحد وواحد من مية، واحد وواحد من ألف… ومش هتخلص.</p>
+<p class="say">فالسؤال اللي بيفصل بينهم: <strong>أقدر أعدّه ولا لأ؟</strong></p>
+<p class="say">لو أقدر أعدّه، حتى لو العدد كبير زي طلاب جامعة كاملة… يبقى محدود.</p>
+</section>
+<section class="clip" id="clip-07">
+<div class="clip-head"><span class="num">🎙️ 07</span><span class="clip-title">العينة والمعلمة والإحصاءة</span><span class="dur">~0:28</span></div>
+<p class="cue">على الشاشة: كارت العينة (دهبي) بمثال الـ 50 موظف، وبعده كارتين: المعلمة (أزرق) والإحصاءة (دهبي). وفي الآخر حرف P بينوّر مع P، وحرف S مع S.</p>
+<p class="say">المفهوم التاني: <strong>العينة</strong>، وهي جزء من المجتمع بنختاره عشان ندرسه.</p>
+<p class="say">مثلًا: شركة فيها موظفين كتير، واخترنا منهم خمسين موظف بس عشان ندرس مستوى الرضا الوظيفي. الخمسين دول هما العينة.</p>
+<p class="say">أي مقياس نحسبه من <strong>العينة</strong> اسمه <strong>إحصاءة</strong>.</p>
+<p class="say">وأي مقياس نحسبه من <strong>المجتمع</strong> كله اسمه <strong>معلمة</strong>.</p>
+<p class="say">وعشان متتلخبطوش، افتكروها بالحرف الأول:</p>
+<p class="say"><strong>P</strong> مع <strong>P</strong>: الـ Parameter من الـ Population.</p>
+<p class="say">و<strong>S</strong> مع <strong>S</strong>: الـ Statistic من الـ Sample.</p>
+</section>
+<section class="clip" id="clip-08">
+<div class="clip-head"><span class="num">🎙️ 08</span><span class="clip-title">نفس المقياس… بس من مين؟</span><span class="dur">~0:21</span></div>
+<p class="cue">على الشاشة: كارتين جنب بعض: "متوسط درجات كل طلاب الدفعة" ← معلمة (أزرق)، و"متوسط درجات 10 طلاب اخترناهم" ← إحصاءة (دهبي).</p>
+<p class="say">خلوني أسألكم: متوسط درجات <strong>كل</strong> طلاب الدفعة… ده إيه؟</p>
+<p class="say">معلمة، لأنه اتحسب من المجتمع كله.</p>
+<p class="say">طب متوسط درجات <strong>عشر طلاب</strong> بس اخترناهم من الدفعة؟</p>
+<p class="say">إحصاءة، لأنه اتحسب من عينة.</p>
+<p class="say">لاحظتوا؟ نفس المقياس، المتوسط… مرة طلع معلمة ومرة طلع إحصاءة.</p>
+<p class="say">اللي بيحدد مش اسم المقياس… اللي بيحدد هو <strong>اتحسب من مين</strong>.</p>
+</section>
+<section class="clip" id="clip-09">
+<div class="clip-head"><span class="num">🎙️ 09</span><span class="clip-title">الرموز</span><span class="dur">~0:30</span></div>
+<p class="cue">على الشاشة: جدول الرموز بيتبني صف صف: الحجم N / n، المتوسط μ / x̄، التباين σ² / s²، الانحراف المعياري σ / s، النسبة P / p̂. عمود المجتمع أزرق وعمود العينة دهبي.</p>
+<p class="say">كل مقياس من دول ليه رمز في المجتمع ورمز في العينة.</p>
+<p class="say"><strong>الحجم</strong>: في المجتمع N كابيتال، وفي العينة n سمول.</p>
+<p class="say"><strong>المتوسط الحسابي</strong>: في المجتمع "ميو"، وفي العينة "إكس بار".</p>
+<p class="say"><strong>التباين</strong>: في المجتمع "سيجما تربيع"، وفي العينة "إس تربيع".</p>
+<p class="say"><strong>الانحراف المعياري</strong>: في المجتمع "سيجما"، وفي العينة "إس".</p>
+<p class="say">و<strong>النسبة</strong>: في المجتمع P كابيتال، وفي العينة "بي هات".</p>
+<p class="say">وفيه حيلة تريّحكم من الحفظ: رموز المجتمع حروف <strong>كبيرة</strong> أو <strong>يوناني</strong>… ورموز العينة حروف إنجليزي <strong>صغيرة</strong>.</p>
+</section>
+<section class="clip" id="clip-10">
+<div class="clip-head"><span class="num">🎙️ 10</span><span class="clip-title">المعاينة ومزاياها</span><span class="dur">~0:24</span></div>
+<p class="cue">على الشاشة: تعريف المعاينة، وبعده كارت "مزايا المعاينة" بيظهر بند بند: الوقت والجهد، التكلفة، الدقة.</p>
+<p class="say">طب إيه هي <strong>المعاينة</strong>، أو الـ Sampling؟</p>
+<p class="say">هي الأسلوب اللي بنختار بيه العينة. والشرط الأساسي إن العينة دي <strong>تمثل</strong> خصائص المجتمع، يعني تبقى صورة مصغّرة منه.</p>
+<p class="say">وليه نعمل معاينة أصلًا؟ ليها تلات مزايا:</p>
+<p class="say">أولًا، بتوفّر الوقت والمجهود.</p>
+<p class="say">تانيًا، بتقلل التكلفة، سواء فلوس أو ساعات شغل.</p>
+<p class="say">وتالتًا، بتزود دقة النتايج… بشرط إن العينة تتختار بطريقة صح.</p>
+</section>
+<section class="clip" id="clip-11">
+<div class="clip-head"><span class="num">🎙️ 11</span><span class="clip-title">حدود المعاينة</span><span class="dur">~0:32</span></div>
+<p class="cue">على الشاشة: كارت "حدود المعاينة" بيظهر بند بند. وفي الآخر حلة كاملة مكتوب عليها "الحصر الشامل".</p>
+<p class="say">بس المعاينة ليها حدود برضه:</p>
+<p class="say">أولًا، لازم يعملها ناس مؤهلين وعندهم خبرة، وإلا المعلومات اللي هتطلع مش هنقدر نثق فيها.</p>
+<p class="say">تانيًا، ممكن تدينا قيم <strong>متطرفة</strong> بدل قيم بتمثل المجتمع… زي بالظبط لما ندوق من وش الحلة من غير ما نقلّب.</p>
+<p class="say">وتالتًا، فيه احتمال يحصل <strong>خطأ معاينة</strong>… بينما <strong>الحصر الشامل</strong> مفيهوش الخطأ ده.</p>
+<p class="say">والحصر الشامل يعني إيه؟ يعني ندرس <strong>كل</strong> وحدات المجتمع… يعني نشرب الحلة كلها! مفيهوش خطأ معاينة آه، بس مكلّف جدًا وبياخد وقت طويل.</p>
+</section>
+<section class="clip" id="clip-12">
+<div class="clip-head"><span class="num">🎙️ 12</span><span class="clip-title">العشوائية البسيطة</span><span class="dur">~0:24</span></div>
+<p class="cue">على الشاشة: عنوان "طرق اختيار العينة العشوائية" وأربع خانات مقفولة. أول خانة بتتفتح: "العشوائية البسيطة · Simple Random"، ومجموعة نقط بيتسحب منها نقط بشكل عشوائي. كلمة السر: "فرصة متساوية".</p>
+<p class="say">نيجي بقى لأهم جزء: <strong>طرق اختيار العينة العشوائية</strong>. عندنا أربع طرق، ولكل طريقة <strong>كلمة سر</strong>… لو لقيتها في السؤال، هتعرف الإجابة على طول.</p>
+<p class="say">الطريقة الأولى: <strong>العشوائية البسيطة</strong>، أو الـ Simple Random.</p>
+<p class="say">هنا كل مفردة في المجتمع ليها <strong>نفس الفرصة</strong> إنها تدخل العينة.</p>
+<p class="say">وبنختار إزاي؟ بالقرعة، أو بجداول الأعداد العشوائية، أو بالكمبيوتر.</p>
+<p class="say">كلمة السر هنا: <strong>فرصة متساوية</strong>.</p>
+</section>
+<section class="clip" id="clip-13">
+<div class="clip-head"><span class="num">🎙️ 13</span><span class="clip-title">المنتظمة</span><span class="dur">~0:33</span></div>
+<p class="cue">على الشاشة: صف طويل من الأسماء المترقّمة. سهم بيختار أول اسم بشكل عشوائي، وبعدين بيقفز بخطوات ثابتة. معادلة K = N ÷ n، ومثال 1000 ÷ 40 = 25. كلمة السر: "كل رقم K".</p>
+<p class="say">الطريقة التانية: <strong>المنتظمة</strong>، أو الـ Systematic.</p>
+<p class="say">عندنا قايمة بأسامي المجتمع كله. بنختار أول اسم <strong>عشوائي</strong>… وبعد كده ناخد كل اسم رقم K.</p>
+<p class="say">فالأسامي اللي بنختارها بتبقى متباعدة بمسافات متساوية.</p>
+<p class="say">وK دي بنحسبها إزاي؟ K تساوي N على n… يعني حجم المجتمع على حجم العينة.</p>
+<p class="say">مثلًا: قايمة فيها ألف اسم، وعايزين عينة من أربعين اسم. يبقى K تساوي ألف على أربعين… يعني خمسة وعشرين. يعني ناخد كل اسم رقم خمسة وعشرين.</p>
+<p class="say">كلمة السر هنا: <strong>كل رقم K</strong>.</p>
+</section>
+<section class="clip" id="clip-14">
+<div class="clip-head"><span class="num">🎙️ 14</span><span class="clip-title">الطبقية</span><span class="dur">~0:25</span></div>
+<p class="cue">على الشاشة: المجتمع بيتقسم لأربع طبقات ملوّنة (أولى، تانية، تالتة، رابعة)، وبيتسحب عدد صغير من كل طبقة. كلمة السر: "من كل طبقة".</p>
+<p class="say">الطريقة التالتة: <strong>الطبقية</strong>، أو الـ Stratified.</p>
+<p class="say">بنستخدمها لما يكون المجتمع <strong>غير متجانس</strong>، يعني فيه ناس مختلفين عن بعض.</p>
+<p class="say">فبنقسم المجتمع لـ<strong>طبقات</strong>، كل طبقة فيها الحالات المتشابهة، وبعدين نسحب عينة عشوائية بسيطة <strong>من كل طبقة</strong>.</p>
+<p class="say">مثلًا: طلاب كلية التجارة. نقسمهم حسب السنة الدراسية: أولى، وتانية، وتالتة، ورابعة… وناخد شوية طلاب من كل سنة.</p>
+<p class="say">كلمة السر هنا: <strong>من كل طبقة</strong>.</p>
+</section>
+<section class="clip" id="clip-15">
+<div class="clip-head"><span class="num">🎙️ 15</span><span class="clip-title">العنقودية</span><span class="dur">~0:30</span></div>
+<p class="cue">على الشاشة: خريطة متقسمة لمناطق (عناقيد). بيتختار عنقودين بشكل عشوائي، وكل اللي جواهم بيتلوّن. كلمة السر: "العنقود كله". وبعدها مقارنة جنب بعض: الطبقية "شوية من كل مجموعة" ↔ العنقودية "مجموعات كاملة".</p>
+<p class="say">الطريقة الرابعة والأخيرة: <strong>العنقودية</strong>، أو الـ Cluster.</p>
+<p class="say">بنستخدمها لما يكون المجتمع متوزع على مساحة جغرافية كبيرة، زي محافظة أو بلد كاملة.</p>
+<p class="say">بنقسم المجتمع لـ<strong>عناقيد</strong>، زي مناطق أو مدارس، وبعدين نختار شوية عناقيد بشكل عشوائي… وندخّل <strong>كل</strong> الأفراد اللي جوه العناقيد اللي اخترناها.</p>
+<p class="say">كلمة السر هنا: <strong>العنقود كله</strong>.</p>
+<p class="say">وخدوا بالكم من الفرق ده لأنه بيتسأل عليه كتير:</p>
+<p class="say">في <strong>الطبقية</strong> بناخد <strong>شوية من كل</strong> مجموعة…</p>
+<p class="say">وفي <strong>العنقودية</strong> بناخد <strong>مجموعات كاملة</strong> بكل اللي فيها.</p>
+</section>
+<section class="clip" id="clip-16">
+<div class="clip-head"><span class="num">🎙️ 16</span><span class="clip-title">خلي بالك</span><span class="dur">~0:29</span></div>
+<p class="cue">على الشاشة: خلفية دهبي، وعلامة ⚠️ "خلي بالك"، والجملتين بيظهروا واحدة ورا التانية. وفي الآخر سؤال كبير: "اتحسب من مين؟".</p>
+<p class="say">وقبل ما نحل… خلي بالك من النقطة دي، لأنها أكتر مكان الطلبة بتغلط فيه.</p>
+<p class="say"><strong>المعلمة</strong> بتتحسب من المجتمع… وغالبًا بتكون <strong>مجهولة</strong>.</p>
+<p class="say">و<strong>الإحصاءة</strong> بتتحسب من العينة… وبنستخدمها عشان <strong>نقدّر</strong> المعلمة.</p>
+<p class="say">وعشان كده أصلًا بنسحب عينة: نحسب منها، ونحكم على المجتمع كله.</p>
+<p class="say">فلما تلاقي في السؤال كلمة "متوسط"، متقولش على طول معلمة. اسأل نفسك: المتوسط ده <strong>اتحسب من مين؟</strong> من المجتمع كله؟ يبقى معلمة. من ناس اخترناهم؟ يبقى إحصاءة.</p>
+</section>
+<h2>الجزء التالت: نحل مع بعض</h2>
+<section class="clip" id="clip-17">
+<div class="clip-head"><span class="num">🎙️ 17</span><span class="clip-title">مثال 1: السؤال</span><span class="dur">~0:25</span></div>
+<p class="cue">على الشاشة: كارت "2 · نحل مع بعض"، وبعده نص المثال، والعشر أرقام بيظهروا واحد ورا التاني، وتحتهم المطلوب. وبعد آخر كلمة يظهر عداد "وقّف وفكّر".</p>
+<p class="say">يلا بينا نحل.</p>
+<p class="say"><strong>المثال الأول</strong>: عايزين نعرف متوسط الوقت اللي بياخده <strong>كل</strong> طلاب كلية في المواصلات لحد الكلية، وعددهم ألف طالب.</p>
+<p class="say">وعشان نطلّع النتيجة بسرعة، اخترنا عشر طلاب بس، وكانت أزمنة انتقالهم بالدقايق:</p>
+<p class="say">تلاتين، خمسة وعشرين، أربعين، تلاتين، خمسة وعشرين، عشرين، خمسة وتلاتين، تلاتين، خمسة وعشرين، عشرين.</p>
+<p class="say">والمطلوب: نحدد المجتمع، والعينة، والمعلمة، والإحصاءة.</p>
+<p class="say">وقّف الفيديو وحاول تحددهم لوحدك.</p>
+</section>
+<section class="clip" id="clip-18">
+<div class="clip-head"><span class="num">🎙️ 18</span><span class="clip-title">مثال 1: الحل</span><span class="dur">~0:43</span></div>
+<p class="cue">على الشاشة: أربع كروت بيظهروا بالترتيب: المجتمع N = 1,000 (أزرق)، العينة n = 10 (دهبي)، المعلمة μ = ΣX / N (أزرق، "مجهولة")، الإحصاءة x̄ = Σx / n (دهبي، "معلومة"). وبعدين الأرقام بتتجمع لحد 280، وx̄ = 280 ÷ 10 = 28 دقيقة.</p>
+<p class="say">نشوف الحل.</p>
+<p class="say"><strong>المجتمع</strong>: هو كل طلاب الكلية، يعني الألف طالب. N تساوي ألف.</p>
+<p class="say"><strong>العينة</strong>: هي العشر طلاب اللي اخترناهم. n تساوي عشرة.</p>
+<p class="say"><strong>المعلمة</strong>: هي متوسط زمن الانتقال لكل الألف طالب، "ميو"، وبتساوي مجموع X على N.</p>
+<p class="say">وهي <strong>مجهولة</strong>… ليه؟ لأننا مسألناش الألف طالب.</p>
+<p class="say"><strong>الإحصاءة</strong>: هي متوسط زمن الانتقال للعشر طلاب، "إكس بار"، وبتساوي مجموع x على n… ودي <strong>معلومة</strong>، لأن أرقامهم قدامنا.</p>
+<p class="say">وطالما الأرقام قدامنا، يلا نحسبها: نجمع العشر أرقام… المجموع ميتين وتمانين.</p>
+<p class="say">نقسم على عشرة… يبقى إكس بار تساوي تمانية وعشرين دقيقة.</p>
+<p class="say">يعني متوسط وقت الانتقال في العينة تمانية وعشرين دقيقة، وده اللي هنستخدمه عشان <strong>نقدّر</strong> متوسط الكلية كلها.</p>
+</section>
+<section class="clip" id="clip-19">
+<div class="clip-head"><span class="num">🎙️ 19</span><span class="clip-title">مثال 2</span><span class="dur">~0:48</span></div>
+<p class="cue">على الشاشة: نص المثال والأرقام، وعداد "جرّب لوحدك" وقت السكتة. وبعدها نفس الأربع كروت بالأرقام الجديدة: N = 800، n = 10، μ مجهولة، x̄ = 240 ÷ 10 = 24 وحدة.</p>
+<p class="say"><strong>المثال التاني</strong>، ودا عايزك تحله لوحدك الأول.</p>
+<p class="say">عايزين نعرف متوسط المبيعات اليومية لكل المحلات في مدينة، وعددها تمنمية محل.</p>
+<p class="say">اخترنا عشر محلات، وكانت مبيعاتهم اليومية بالوحدات:</p>
+<p class="say">عشرين، خمسة وتلاتين، عشرين، تلاتين، خمسة وعشرين، عشرين، خمستاشر، تلاتين، خمسة وعشرين، عشرين.</p>
+<p class="say">حدد المجتمع، والعينة، والمعلمة، والإحصاءة… واحسب إكس بار كمان. وقّف الفيديو وجرّب.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">خلّصت؟ نشوف.</p>
+<p class="say">المجتمع: كل محلات المدينة، N تساوي تمنمية.</p>
+<p class="say">العينة: العشر محلات اللي اخترناهم، n تساوي عشرة.</p>
+<p class="say">المعلمة: متوسط المبيعات اليومية لكل المحلات، "ميو"… ومجهولة.</p>
+<p class="say">الإحصاءة: متوسط مبيعات العشر محلات، "إكس بار"… ومعلومة.</p>
+<p class="say">ولو جمعنا الأرقام، المجموع هيطلع ميتين وأربعين… على عشرة… يبقى إكس بار تساوي أربعة وعشرين وحدة.</p>
+<p class="say">لو طلعلك نفس الرقم… عاش!</p>
+</section>
+<section class="clip" id="clip-20">
+<div class="clip-head"><span class="num">🎙️ 20</span><span class="clip-title">قبل الأسئلة</span><span class="dur">~0:14</span></div>
+<p class="cue">على الشاشة: "16 سؤال اختيار من متعدد"، والخطوات بتظهر بالترتيب: اقرا ← وقّف ← حل ← شوف الإجابة.</p>
+<p class="say">دلوقتي هنحل ستاشر سؤال اختيار من متعدد من أسئلة الفصل.</p>
+<p class="say">والطريقة: هقرا السؤال والاختيارات، وهيظهرلك عداد على الشاشة… وقّف الفيديو، وحل لوحدك، وبعدين كمّل وشوف الإجابة.</p>
+<p class="say">وافتكر: دوّر في السؤال على <strong>كلمة السر</strong>.</p>
+</section>
+<h2>الجزء الرابع: أسئلة الاختيار من متعدد</h2>
+<p class="note">على الشاشة في كل سؤال: السؤال والاختيارات الأربعة، وعداد 5 ثواني وقت السكتة، وبعدها الإجابة الصح بتنوّر أخضر، وكلمة السر بتتعلّم عليها في نص السؤال.</p>
+<section class="clip" id="clip-21">
+<div class="clip-head"><span class="num">🎙️ 21</span><span class="clip-title">سؤال 1</span><span class="dur">~0:22</span></div>
+<p class="say">السؤال الأول: مستشفى فيها ألفين موظف. الباحث اختار منهم مية وخمسين موظف عشان يشاركوا في دراسة. المية وخمسين موظف دول بيمثلوا إيه؟</p>
+<p class="say">أ: المجتمع.</p>
+<p class="say">ب: العينة.</p>
+<p class="say">ج: المعلمة.</p>
+<p class="say">د: الحصر الشامل.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: العينة</strong>.</p>
+<p class="say">الألفين موظف هما الحلة… والمية وخمسين اللي اخترناهم هما المعلقة.</p>
+</section>
+<section class="clip" id="clip-22">
+<div class="clip-head"><span class="num">🎙️ 22</span><span class="clip-title">سؤال 2</span><span class="dur">~0:30</span></div>
+<p class="say">السؤال التاني: أنهي مثال من دول بيمثل <strong>مجتمع</strong> إحصائي، مش عينة؟</p>
+<p class="say">أ: أربعين موظف تم اختيارهم من شركة.</p>
+<p class="say">ب: خمسين طالب تم اختيارهم من جامعة.</p>
+<p class="say">ج: جميع العملاء المسجلين في شركة، وعددهم ستمية عميل.</p>
+<p class="say">د: عشرين آلة تم اختيارها من مصنع.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج</strong>.</p>
+<p class="say">كلمة "جميع" معناها كل العناصر، ومحدش اختار جزء منهم. أما باقي الاختيارات فكلها فيها "تم اختيارهم"… ودي علامة العينة.</p>
+</section>
+<section class="clip" id="clip-23">
+<div class="clip-head"><span class="num">🎙️ 23</span><span class="clip-title">سؤال 3</span><span class="dur">~0:14</span></div>
+<p class="say">السؤال التالت: المجتمع اللي نقدر نعد وحداته اسمه إيه؟</p>
+<p class="say">أ: مجتمع غير محدود.</p>
+<p class="say">ب: مجتمع محدود.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: مجتمع محدود</strong>. طالما تقدر تعدّه… يبقى محدود.</p>
+</section>
+<section class="clip" id="clip-24">
+<div class="clip-head"><span class="num">🎙️ 24</span><span class="clip-title">سؤال 4</span><span class="dur">~0:27</span></div>
+<p class="say">السؤال الرابع: أنهي مثال من دول مجتمع <strong>غير محدود</strong>؟</p>
+<p class="say">أ: المدرسين في مدرسة.</p>
+<p class="say">ب: الآلات في مصنع.</p>
+<p class="say">ج: الطلاب في جامعة.</p>
+<p class="say">د: الأعداد العشرية بين واحد واتنين.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>د: الأعداد العشرية بين واحد واتنين</strong>.</p>
+<p class="say">لأن بين أي رقمين فيه كسور مالهاش آخر، فمستحيل تتعد. أما أ وب وج، فكلهم ممكن يتعدّوا مهما كان عددهم كبير.</p>
+</section>
+<section class="clip" id="clip-25">
+<div class="clip-head"><span class="num">🎙️ 25</span><span class="clip-title">سؤال 5</span><span class="dur">~0:21</span></div>
+<p class="say">السؤال الخامس: باحث حسب التباين باستخدام بيانات <strong>كل فرد</strong> في المجتمع. التباين ده يعتبر إيه؟</p>
+<p class="say">أ: إحصاءة.</p>
+<p class="say">ب: عينة.</p>
+<p class="say">ج: معلمة.</p>
+<p class="say">د: طريقة معاينة.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: معلمة</strong>.</p>
+<p class="say">اتحسب من مين؟ من المجتمع كله… يبقى معلمة. وده اسمه تباين المجتمع، "سيجما تربيع".</p>
+</section>
+<section class="clip" id="clip-26">
+<div class="clip-head"><span class="num">🎙️ 26</span><span class="clip-title">سؤال 6</span><span class="dur">~0:23</span></div>
+<p class="say">السؤال السادس: اتحسب متوسط دخل ميتين موظف تم اختيارهم من شركة. المتوسط ده يعتبر إيه؟</p>
+<p class="say">أ: معلمة.</p>
+<p class="say">ب: إحصاءة.</p>
+<p class="say">ج: مجتمع.</p>
+<p class="say">د: حصر شامل.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: إحصاءة</strong>.</p>
+<p class="say">الميتين موظف "تم اختيارهم"، يعني عينة… والمقياس اللي بيتحسب من العينة إحصاءة. وخلي بالك: كلمة "متوسط" هنا مش معناها معلمة!</p>
+</section>
+<section class="clip" id="clip-27">
+<div class="clip-head"><span class="num">🎙️ 27</span><span class="clip-title">سؤال 7</span><span class="dur">~0:26</span></div>
+<p class="say">السؤال السابع: أنهي عبارة من دول صحيحة؟</p>
+<p class="say">أ: المعلمة بتتحسب من العينة.</p>
+<p class="say">ب: الإحصاءة بتتحسب من المجتمع.</p>
+<p class="say">ج: المعلمة بتتحسب من المجتمع.</p>
+<p class="say">د: الإحصاءة والمعلمة متساويين دايمًا.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: المعلمة بتتحسب من المجتمع</strong>.</p>
+<p class="say">افتكر الحرف الأول: P مع P، وS مع S.</p>
+<p class="say">وأما د فغلط، لأن الإحصاءة مجرد تقدير للمعلمة، ومش شرط تساويها.</p>
+</section>
+<section class="clip" id="clip-28">
+<div class="clip-head"><span class="num">🎙️ 28</span><span class="clip-title">سؤال 8</span><span class="dur">~0:24</span></div>
+<p class="say">السؤال التامن: استخدام العينة ممكن يقلل إيه؟</p>
+<p class="say">أ: حجم المجتمع.</p>
+<p class="say">ب: عدد المتغيرات.</p>
+<p class="say">ج: التكلفة وساعات العمل.</p>
+<p class="say">د: الحاجة للتحليل الإحصائي.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: التكلفة وساعات العمل</strong>، ودي من مزايا المعاينة.</p>
+<p class="say">وخلي بالك من أ: العينة مش بتصغّر المجتمع نفسه… الحلة زي ما هي، إحنا بس دقنا منها معلقة.</p>
+</section>
+<section class="clip" id="clip-29">
+<div class="clip-head"><span class="num">🎙️ 29</span><span class="clip-title">سؤال 9</span><span class="dur">~0:20</span></div>
+<p class="say">السؤال التاسع: لو الباحث عايز يختار أفراد من المجتمع، بحيث كل فرد يكون ليه <strong>نفس فرصة</strong> الاختيار، هيستخدم إيه؟</p>
+<p class="say">أ: المعاينة المنتظمة.</p>
+<p class="say">ب: المعاينة الطبقية.</p>
+<p class="say">ج: المعاينة العشوائية البسيطة.</p>
+<p class="say">د: المعاينة العنقودية.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: العشوائية البسيطة</strong>. كلمة السر: "فرصة متساوية".</p>
+</section>
+<section class="clip" id="clip-30">
+<div class="clip-head"><span class="num">🎙️ 30</span><span class="clip-title">سؤال 10</span><span class="dur">~0:33</span></div>
+<p class="say">السؤال العاشر: باحث عنده قايمة فيها ألف اسم. اختار اسم بشكل عشوائي، وبعدين اختار كل اسم رقم خمسة وعشرين بعده. الطريقة دي اسمها إيه؟</p>
+<p class="say">أ: الطبقية.</p>
+<p class="say">ب: المنتظمة.</p>
+<p class="say">ج: العشوائية البسيطة.</p>
+<p class="say">د: العنقودية.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: المنتظمة</strong>.</p>
+<p class="say">بداية عشوائية، وبعدين مسافة ثابتة… K تساوي خمسة وعشرين.</p>
+<p class="say">وتقدر كمان تعرف حجم العينة: ألف على خمسة وعشرين… يعني أربعين اسم.</p>
+<p class="say">وسؤال بونص: لو عايزين خمسين اسم من نفس القايمة، K هتبقى كام؟ … عشرين.</p>
+</section>
+<section class="clip" id="clip-31">
+<div class="clip-head"><span class="num">🎙️ 31</span><span class="clip-title">سؤال 11</span><span class="dur">~0:21</span></div>
+<p class="say">السؤال الحداشر: في المعاينة المنتظمة، قيمة K بتحدد إيه؟</p>
+<p class="say">أ: حجم المجتمع.</p>
+<p class="say">ب: المسافة بين الوحدات المختارة.</p>
+<p class="say">ج: متوسط المجتمع.</p>
+<p class="say">د: عدد المتغيرات.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: المسافة بين الوحدات المختارة</strong>. K هي الخطوة الثابتة بين كل وحدة واللي بعدها، وبتساوي N على n.</p>
+</section>
+<section class="clip" id="clip-32">
+<div class="clip-head"><span class="num">🎙️ 32</span><span class="clip-title">سؤال 12</span><span class="dur">~0:23</span></div>
+<p class="say">السؤال الاتناشر: باحث قسّم أفراد المجتمع لطبقات حسب المرحلة الدراسية، وبعدين اختار عينة عشوائية من كل طبقة. هو كده استخدم إيه؟</p>
+<p class="say">أ: العشوائية البسيطة.</p>
+<p class="say">ب: العنقودية.</p>
+<p class="say">ج: المنتظمة.</p>
+<p class="say">د: الطبقية.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>د: الطبقية</strong>. كلمة السر: "من كل طبقة". والمراحل الدراسية هي الطبقات، زي مثال سنين كلية التجارة.</p>
+</section>
+<section class="clip" id="clip-33">
+<div class="clip-head"><span class="num">🎙️ 33</span><span class="clip-title">سؤال 13</span><span class="dur">~0:31</span></div>
+<p class="say">السؤال التلتاشر: جامعة فيها ستين في المية من الطلاب في المرحلة الجامعية، وأربعين في المية دراسات عليا. الباحث قسّم الطلاب للمجموعتين دول، وبعدين اختار طلاب بشكل عشوائي من كل مجموعة. استخدم أنهي طريقة؟</p>
+<p class="say">أ: العنقودية.</p>
+<p class="say">ب: المنتظمة.</p>
+<p class="say">ج: الطبقية.</p>
+<p class="say">د: الحصر الشامل.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: الطبقية</strong>. المجموعتين هما الطبقات، والاختيار "من كل مجموعة".</p>
+<p class="say">والنسب ستين وأربعين دي مجرد وصف للطبقات… متتلخبطش، مش مطلوب تحسب بيها حاجة.</p>
+</section>
+<section class="clip" id="clip-34">
+<div class="clip-head"><span class="num">🎙️ 34</span><span class="clip-title">سؤال 14</span><span class="dur">~0:18</span></div>
+<p class="say">السؤال الأربعتاشر: في المعاينة الطبقية، المجتمع بيتقسم لمجموعات اسمها إيه؟</p>
+<p class="say">أ: عناقيد.</p>
+<p class="say">ب: عينات.</p>
+<p class="say">ج: طبقات.</p>
+<p class="say">د: معلمات.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ج: طبقات</strong>، أو الـ Strata.</p>
+<p class="say">أما "العناقيد" فدي مجموعات المعاينة العنقودية… فخلي بالك ومتخلطش بينهم.</p>
+</section>
+<section class="clip" id="clip-35">
+<div class="clip-head"><span class="num">🎙️ 35</span><span class="clip-title">سؤال 15</span><span class="dur">~0:28</span></div>
+<p class="say">السؤال الخمستاشر: لو الباحث اختار شوية مدارس بشكل عشوائي، وبعدين أخد <strong>جميع</strong> الطلاب اللي في المدارس دي، تبقى طريقة المعاينة إيه؟</p>
+<p class="say">أ: العنقودية.</p>
+<p class="say">ب: الطبقية.</p>
+<p class="say">ج: المنتظمة.</p>
+<p class="say">د: العشوائية البسيطة.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>أ: العنقودية</strong>. كل مدرسة عنقود، واخترنا مدارس كاملة بـ"جميع" طلابها.</p>
+<p class="say">وقارنها بسؤال تلتاشر: هناك خدنا شوية من كل مجموعة، فكانت طبقية… هنا خدنا مجموعات كاملة، فبقت عنقودية.</p>
+</section>
+<section class="clip" id="clip-36">
+<div class="clip-head"><span class="num">🎙️ 36</span><span class="clip-title">سؤال 16</span><span class="dur">~0:24</span></div>
+<p class="say">السؤال الأخير: لو المجتمع متوزع على مناطق جغرافية كبيرة، والباحث اختار بشكل عشوائي عدد من المناطق، ودرس <strong>جميع</strong> الوحدات اللي فيها، العينة دي اسمها إيه؟</p>
+<p class="say">أ: عشوائية بسيطة.</p>
+<p class="say">ب: عشوائية عنقودية.</p>
+<p class="say">ج: عشوائية طبقية.</p>
+<p class="say">د: عشوائية منتظمة.</p>
+<div class="pause">⏸️ اسكت 3 ثواني</div>
+<p class="say">الإجابة <strong>ب: عنقودية</strong>. "مناطق جغرافية"، و"جميع الوحدات" في المناطق المختارة… يبقى عنقودية.</p>
+</section>
+<h2>الجزء الخامس: الختام</h2>
+<section class="clip" id="clip-37">
+<div class="clip-head"><span class="num">🎙️ 37</span><span class="clip-title">الخلاصة</span><span class="dur">~0:29</span></div>
+<p class="cue">على الشاشة: "خلاصة السكشن · 3 حاجات تخرج بيها النهارده"، وكل نقطة بتظهر لوحدها: الحلة والمعلقة، جدول الرموز مصغّر، وكلمات السر الأربعة.</p>
+<p class="say">قبل ما نمشي… تلات حاجات عايزك تخرج بيهم من السكشن ده:</p>
+<p class="say"><strong>أولًا: الحلة والمعلقة.</strong> المجتمع هو كل العناصر، والعينة جزء بنختاره منه… بشرط تكون ممثلة له، يعني نقلّب قبل ما ندوق.</p>
+<p class="say"><strong>تانيًا: المعلمة من المجتمع، والإحصاءة من العينة.</strong> وعلى طول اسأل نفسك: المقياس ده اتحسب من مين؟</p>
+<p class="say"><strong>تالتًا: كلمات السر.</strong> "فرصة متساوية" يبقى بسيطة. "كل رقم K" يبقى منتظمة. "من كل طبقة" يبقى طبقية. و"العنقود كله" يبقى عنقودية.</p>
+</section>
+<section class="clip" id="clip-38">
+<div class="clip-head"><span class="num">🎙️ 38</span><span class="clip-title">الواجب والختام</span><span class="dur">~0:21</span></div>
+<p class="cue">على الشاشة: كارت الواجب: "مثال 3 · استهلاك المياه لـ 1,500 منزل"، و"تأكد من إجابتك: x̄ = 125 لتر". وبعده "شكرًا لكم".</p>
+<p class="say">ولو عايز تتأكد إنك فاهم، عندك واجب صغير: مثال تلاتة في أسئلة الفصل، بتاع استهلاك المية لألف وخمسمية بيت. حدد المجتمع والعينة والمعلمة والإحصاءة، واحسب متوسط العينة… والمفروض يطلعلك مية وخمسة وعشرين لتر.</p>
+<p class="say">وحل كمان باقي أسئلة الاختيار من متعدد اللي في آخر المحاضرة.</p>
+<p class="say">شكرًا ليكم… ونشوفكم في السكشن الجاي!</p>
+</section>
+</main></body></html>
