@@ -19,10 +19,10 @@ function question(S, { text, nums, ask, at }) {
 
 // The four answer rows on the left.
 function answers(S, rows, top = 250) {
-  const el = S.add(`<div class="abs col" style="left:130px;width:820px;top:${top}px;gap:16px">
-    ${rows.map((r) => `<div class="card row" style="padding:16px 22px;gap:20px">
+  const el = S.add(`<div class="abs col" style="left:130px;width:820px;top:${top}px;gap:10px">
+    ${rows.map((r) => `<div class="card row" style="padding:8px 22px;gap:20px">
       <span class="tag ${r.cls}" style="min-width:150px;justify-content:center">${r.name}</span>
-      <div class="col" style="gap:0;flex:1"><div class="h3 val" style="direction:ltr;text-align:right;line-height:1.3">${r.val}</div><div class="t3 muted desc">${r.desc}</div></div>
+      <div class="col" style="gap:0;flex:1"><div class="val" style="font-size:44px;font-weight:700;direction:ltr;text-align:right;line-height:1.25">${r.val}</div><div class="muted desc" style="font-size:28px;line-height:1.45">${r.desc}</div></div>
       ${r.status ? `<span class="tag ${r.status[0]} st">${r.status[1]}</span>` : ''}</div>`).join('')}</div>`);
   const cards = [...el.children];
   rows.forEach((r, i) => {
@@ -36,7 +36,7 @@ function answers(S, rows, top = 250) {
 }
 
 // Sum the numbers, then divide: x̄ = total / 10.
-function calc(S, { total, n, result, unit, atSum, atTotal, atDiv, atRes, top = 800 }) {
+function calc(S, { total, n, result, unit, atSum, atTotal, atDiv, atRes, top = 790 }) {
   const el = S.add(`<div class="abs card blue" style="left:130px;width:820px;top:${top}px;padding:22px 30px">
     <div class="t3 b muted">المتوسط = مجموع الأرقام ÷ عددهم</div>
     <div class="h2 navy row" style="direction:ltr;justify-content:flex-end;gap:18px;line-height:1.3">
@@ -89,7 +89,7 @@ export default {
       { name: 'المعلمة', cls: 'blue', val: `${m('μ')} = ${m('ΣX')} / ${m('N')}`, desc: 'متوسط وقت الألف طالب كلهم', at: t(17.2), atD: t(18.2), atV: t(21.3), status: ['red', 'مجهولة'], atS: t(36.8) },
       { name: 'الإحصاءة', cls: 'gold', val: `${m(xbar)} = ${m('Σx')} / ${m('n')}`, desc: 'متوسط وقت العشر طلاب بس', at: t(38.7), atD: t(39.6), atV: t(42.6), status: ['green', 'معلومة'], atS: t(45.6) },
     ], 250);
-    const why = S.add(`<div class="abs card red" style="left:130px;width:820px;top:666px;padding:16px 22px"><div class="t2">مجهولة… لأننا مسألناش الألف طالب، سألنا العشرة بس</div></div>`);
+    const why = S.add(`<div class="abs card red" style="left:130px;width:820px;top:640px;padding:16px 22px"><div class="t2">مجهولة… لأننا مسألناش الألف طالب، سألنا العشرة بس</div></div>`);
     S.show(why, t(24.3), 'fadeUp', 0.5);
     S.hide(why, t(38.3), 'fade', 0.3);
     // add the numbers up
