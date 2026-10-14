@@ -11,14 +11,14 @@ export default {
       const t = (r) => S.t(r);
       title(S, '3 حاجات تخرج بيها النهارده', { at: t(0.55), kicker: 'خلاصة السكشن' });
       const card = (n, head, body) => `<div class="card" style="flex:1;min-height:600px;padding:34px 36px;display:flex;flex-direction:column;gap:22px">
-        <div class="row" style="gap:16px"><span class="badge">${n}</span><span class="h3 b">${head}</span></div>${body}</div>`;
+        <div class="row" style="gap:16px;align-items:flex-start"><span class="badge">${n}</span><span class="h3 b">${head}</span></div>${body}</div>`;
       const row = S.add(`<div class="abs row" style="right:130px;left:130px;top:280px;gap:30px;align-items:stretch">
         ${card(1, 'الحلة والمعلقة', `<div class="t2">المجتمع هو الكل… والعينة جزء صغير بناخده منه.</div>
           <div class="t2 r1b"><span class="gold b">بس نقلّب الأول:</span> نختار عشوائي عشان العينة تمثّل المجتمع.</div>`)}
-        ${card(2, 'ميم مع ميم', `<div class="t2"><span class="b">معلمة</span> ← مجتمع &nbsp;·&nbsp; <span class="b gold">إحصاءة</span> ← عينة</div>
+        ${card(2, 'ميم مع ميم', `<div class="t2 nowrap"><span class="b">معلمة</span> ← مجتمع</div><div class="t2 nowrap" style="margin-top:-14px"><span class="b gold">إحصاءة</span> ← عينة</div>
           <div class="t2 r2b">اتلخبطت؟ اسأل نفسك: <span class="gold b">اتحسب من مين؟</span></div>
           <div class="h3 r2c" style="direction:ltr;text-align:right;color:#cfe0f2">${m('N μ σ P')} &nbsp; <span style="color:${C.gold}">${m('n <span class="bar">x</span> s <span class="hat">p</span>')}</span></div>`)}
-        ${card(3, 'طرق اختيار العينة', `<div class="col" style="gap:8px">
+        ${card(3, 'طرق الاختيار', `<div class="col" style="gap:8px">
           ${[['فرصة متساوية', 'بسيطة'], ['كل رقم K', 'منتظمة'], ['من كل طبقة', 'طبقية'], ['العنقود كله', 'عنقودية']].map(([k, w]) => `<div class="row t2 kw" style="gap:12px"><span class="tag gold" style="font-size:28px;padding:2px 16px">${k}</span><span>← ${w}</span></div>`).join('')}</div>`)}
       </div>`);
       const cards = [...row.children];

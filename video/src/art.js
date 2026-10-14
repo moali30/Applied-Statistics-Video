@@ -141,11 +141,11 @@ export function scale({ w = 900 } = {}) {
     <g class="beam"><rect x="120" y="110" width="660" height="18" rx="9" fill="${C.blue}"/></g>
     <circle cx="450" cy="119" r="20" fill="${C.gold}"/>
     <g class="panR">
-      <path d="M190 128 L120 330 M190 128 L260 330" stroke="${C.muted}" stroke-width="4"/>
+      <path d="M190 128 L90 330 M190 128 L290 330" stroke="${C.muted}" stroke-width="4"/>
       <path d="M90 330 L290 330 Q280 380 190 380 Q100 380 90 330 Z" fill="${C.blueSoft}" stroke="${C.blue}" stroke-width="5"/>
     </g>
     <g class="panL">
-      <path d="M710 128 L640 330 M710 128 L780 330" stroke="${C.muted}" stroke-width="4"/>
+      <path d="M710 128 L610 330 M710 128 L810 330" stroke="${C.muted}" stroke-width="4"/>
       <path d="M610 330 L810 330 Q800 380 710 380 Q620 380 610 330 Z" fill="${C.goldSoft}" stroke="${C.gold}" stroke-width="5"/>
     </g>
   `, 'scale', `width:${w}px`);

@@ -71,7 +71,7 @@ export default {
     const asks = S.add(`<div class="abs col" style="left:130px;width:820px;top:270px;gap:16px">
       ${[['المجتمع', 'blue'], ['العينة', 'gold'], ['المعلمة', 'blue'], ['الإحصاءة', 'gold']].map(([n, c]) => `<div class="card row" style="padding:16px 22px;gap:20px"><span class="tag ${c}" style="min-width:150px;justify-content:center">${n}</span><span class="h3 muted">؟</span></div>`).join('')}</div>`);
     [34.6, 36.4, 37.3, 38.2].forEach((r, i) => S.show(asks.children[i], t(r), 'fadeLeft', 0.4));
-    countdown(S, { start: S.duration - 5.1, len: 4.6, x: 540, y: 880, label: 'جرّب لوحدك', size: 150 });
+    countdown(S, { start: S.duration - 5.1, len: 4.6, x: 540, y: 830, label: 'جرّب لوحدك', size: 130 });
   },
 
   '19': (S) => {
@@ -146,14 +146,11 @@ export default {
     const sub = S.add(`<div class="abs t1" style="right:130px;top:250px">من أسئلة الفصل… زي اللي هتشوفوه في الامتحان بالظبط</div>`);
     S.show(sub, t(6.0), 'fadeUp', 0.5);
     const steps = ['هقرا السؤال والاختيارات', 'يظهرلك عداد… وقّف الفيديو', 'حل لوحدك', 'كمّل… وشوف الإجابة'];
-    const row = S.add(`<div class="abs row" style="right:130px;left:130px;top:400px;justify-content:space-between;gap:16px">
-      ${steps.map((s, i) => `<div class="card row" style="gap:16px;padding:20px 24px"><span class="badge">${i + 1}</span><span class="t2 b nowrap">${s}</span></div>${i < 3 ? `<div>${art.arrow({ w: 50 })}</div>` : ''}`).join('')}</div>`);
+    const row = S.add(`<div class="abs" style="right:130px;left:130px;top:360px;display:grid;grid-template-columns:1fr 1fr;gap:18px 30px">
+      ${steps.map((s, i) => `<div class="card row" style="gap:18px;padding:16px 24px"><span class="badge">${i + 1}</span><span class="t2 b nowrap">${s}</span></div>`).join('')}</div>`);
     const items = [...row.children];
-    [9.8, 11.4, 12.9, 14.2].forEach((r, i) => {
-      S.show(items[i * 2], t(r), 'fadeUp', 0.5);
-      if (i) S.show(items[i * 2 - 1], t(r) - 0.2, 'fade', 0.3);
-    });
-    const two = S.add(`<div class="abs row" style="right:130px;left:130px;top:620px;gap:30px;align-items:stretch">
+    [9.8, 11.4, 12.9, 14.2].forEach((r, i) => S.show(items[i], t(r), 'fadeUp', 0.5));
+    const two = S.add(`<div class="abs row" style="right:130px;left:130px;top:660px;gap:30px;align-items:stretch">
       <div class="t1 b" style="align-self:center">وافتكر حاجتين بس:</div>
       <div class="card blue" style="flex:1;padding:24px 30px"><div class="h3 b blue">اتحسب من مين؟</div><div class="t2">من المجتمع ولا من العينة؟</div></div>
       <div class="card gold" style="flex:1;padding:24px 30px"><div class="h3 b gold">كلمة السر</div><div class="t2">بتقولك أنهي طريقة في اختيار العينة</div></div></div>`);

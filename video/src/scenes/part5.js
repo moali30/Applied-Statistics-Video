@@ -86,7 +86,7 @@ const QUESTIONS = [
     q: 'في المعاينة المنتظمة، حرف <span class="m">K</span> بيحدد إيه؟',
     hl: [], opts: ['حجم المجتمع', 'المسافة بين الوحدات المختارة', 'متوسط المجتمع', 'عدد المتغيرات'], correct: 1,
     tq: 0.88, to: [4.9, 6.47, 9.37, 10.4], ta: 17.2,
-    notes: [[21.6, '<span class="m">K</span> = طول الخطوة بين كل اسم واللي بعده'], [25.95, 'وبنجيبه من: <span class="m">K</span> = <span class="m">N</span> ÷ <span class="m">n</span>']],
+    notes: [[21.6, '<span class="m">K</span> = طول الخطوة بين كل اسم واللي بعده'], [25.95, 'وبنجيبه من: <span class="m" dir="ltr">K <span class="op">=</span> N <span class="op">÷</span> n</span>']],
   },
   {
     clip: '33', topic: 'المعاينة الطبقية',
@@ -140,7 +140,7 @@ function mcq(S, d, n) {
   const box = S.add(`<div class="abs col" style="right:130px;left:130px;top:140px;gap:34px">
     <div class="mcq-q" style="position:static"><span class="badge">${n}</span><div class="text">${withHl(d.q, d.hl)}</div></div>
     <div class="opts" style="position:static;--n:${two ? 2 : 4};${two ? 'width:1100px' : ''}">
-      ${d.opts.map((o, i) => `<div class="opt">${i === d.correct ? '<div class="good"></div>' : ''}<span class="letter">${L[i]})</span><span class="otext">${o}</span>${i === d.correct ? `<span class="ok">${ic.check({ w: 44 })}</span>` : ''}</div>`).join('')}
+      ${d.opts.map((o, i) => `<div class="opt">${i === d.correct ? '<div class="good"></div>' : ''}<span class="letter">${L[i]})</span><span class="otext">${o}</span>${i === d.correct ? `<span class="ok">${ic.check({ w: 30, color: '#fff', sw: 3 })}</span>` : ''}</div>`).join('')}
     </div>
     <div class="area" style="position:relative;min-height:300px">
       <div class="answer" style="position:static">

@@ -104,10 +104,10 @@ body { font-family: 'Body', 'Tahoma', sans-serif; color: var(--ink); direction: 
 .m { font-family: 'Math', 'Times New Roman', serif; font-style: italic; direction: ltr; unicode-bidi: isolate; display: inline-block; white-space: nowrap; }
 .m .up, .m.up { font-family: 'MathUp', serif; font-style: normal; }
 .m .op { font-family: 'Body', sans-serif; font-style: normal; font-weight: 500; padding: 0 0.18em; }
-.m sup { font-size: 0.6em; vertical-align: 0.75em; line-height: 0; font-style: normal; font-family: 'MathUp', serif; }
-.bar, .hat { position: relative; display: inline-block; }
-.bar::before { content: ''; position: absolute; left: 0.14em; right: 0.02em; top: 0.12em; height: 0.07em; background: currentColor; }
-.hat::before { content: '^'; position: absolute; left: 0.04em; right: 0; top: -0.45em; text-align: center; font-style: normal; font-family: 'MathUp', serif; font-size: 0.9em; }
+.m sup { font-size: 0.6em; vertical-align: 0.75em; line-height: 0; font-style: normal; font-family: 'MathUp', serif; margin-left: 0.07em; }
+.bar, .hat { position: relative; display: inline-block; line-height: 1; }
+.bar::before { content: ''; position: absolute; left: 0.12em; right: 0; top: 0.3em; height: 0.055em; background: currentColor; }
+.hat::before { content: '^'; position: absolute; left: 0.08em; right: 0; top: -0.09em; text-align: center; font-style: normal; font-family: 'MathUp', serif; font-size: 0.6em; line-height: 1; }
 .num { font-family: 'Body', sans-serif; font-weight: 700; direction: ltr; unicode-bidi: isolate; display: inline-block; }
 
 /* cards */
@@ -141,7 +141,7 @@ body { font-family: 'Body', 'Tahoma', sans-serif; color: var(--ink); direction: 
 .badge { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--blue); color: #fff; font-size: 34px; font-weight: 700; flex: none; }
 .dark .badge { background: var(--gold); color: var(--navy); }
 
-.hl { position: relative; z-index: 0; white-space: nowrap; }
+.hl { position: relative; z-index: 0; white-space: nowrap; margin: 0 0.12em; }
 .hl::before { content: ''; position: absolute; z-index: -1; inset: 6% -0.15em 2% -0.15em; border-radius: 0.18em; background: var(--gold-soft); opacity: var(--glow, 0); }
 .dark .hl::before { background: rgba(232, 168, 7, 0.28); }
 .hl.u::before { inset: auto -0.05em -0.04em -0.05em; height: 0.14em; border-radius: 0; background: var(--gold); }
@@ -165,7 +165,7 @@ body { font-family: 'Body', 'Tahoma', sans-serif; color: var(--ink); direction: 
 .opt { position: relative; display: flex; align-items: center; gap: 14px; padding: 22px 28px; border-radius: 14px; background: var(--card); border: 2px solid var(--line); font-size: 38px; font-weight: 500; min-height: 118px; line-height: 1.4; }
 .opt .letter { flex: none; font-weight: 700; color: var(--muted); }
 .opt .good { position: absolute; inset: -2px; border-radius: 14px; border: 3px solid var(--green); background: var(--green-soft); }
-.opt .ok { position: absolute; left: 22px; top: 50%; translate: 0 -50%; width: 44px; height: 44px; color: var(--green); }
+.opt .ok { position: absolute; left: -16px; top: -16px; width: 48px; height: 48px; border-radius: 50%; background: var(--green); display: grid; place-items: center; box-shadow: 0 0 0 4px var(--sand); }
 .opt > span { position: relative; }
 .answer { position: absolute; right: 130px; left: 130px; display: flex; flex-direction: column; gap: 10px; }
 .answer .line { font-size: 38px; font-weight: 700; line-height: 1.55; color: var(--green-ink); }

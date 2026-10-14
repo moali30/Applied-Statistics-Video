@@ -72,11 +72,11 @@ export default {
     title(S, '2. المنتظمة', { at: t(1.3), kicker: 'الطريقة التانية · Systematic' });
     // the list 1..1000 drawn as rows of 25: every row is one step
     const rows = 16;
-    const gridBox = S.add(`<div class="abs card" style="left:130px;top:250px;padding:24px 26px">
+    const gridBox = S.add(`<div class="abs card" style="left:130px;top:250px;padding:24px 76px 24px 26px">
       <div class="row t3 b muted" style="justify-content:space-between;margin-bottom:10px"><span>كشف الأسامي: من 1 لـ 1000</span><span>كل صف = 25 اسم</span></div>
       <div style="position:relative">${art.dotGrid({ cols: 25, rows, gap: 30, r: 8, base: C.blueLine })}
         <div class="first" style="position:absolute;left:-8px;right:-8px;top:-8px;height:34px;border:3px dashed ${C.gold};border-radius:10px"></div>
-        ${[7, 32, 57, 82].map((v, i) => `<div class="lbl num" style="position:absolute;left:752px;top:${i * 30 - 2}px;font-size:22px;color:${C.goldInk}">${v}</div>`).join('')}
+        ${[7, 32, 57, 82].map((v, i) => `<div class="lbl num" style="position:absolute;left:764px;top:${i * 30 + 1}px;font-size:22px;line-height:1;color:${C.goldInk}">${v}</div>`).join('')}
       </div>
       <div class="tc t2 muted" style="margin-top:4px">⋮</div></div>`);
     S.show(gridBox, t(4.2), 'fadeUp', 0.6);
@@ -173,7 +173,7 @@ export default {
       <svg viewBox="0 0 1000 720" style="position:absolute;inset:0;overflow:visible"><path d="M140 80 Q330 10 520 60 Q700 20 860 110 Q980 220 930 380 Q990 560 820 640 Q620 720 430 660 Q230 710 120 590 Q20 450 70 300 Q40 170 140 80 Z" fill="${C.blueSoft}" stroke="${C.blueLine}" stroke-width="5" stroke-dasharray="16 12"/></svg>
     </div>`);
     S.show(map, t(3.4), 'fade', 0.6);
-    const spots = [[190, 170], [400, 120], [620, 140], [800, 220], [250, 340], [470, 300], [700, 380], [140, 480], [380, 500], [600, 560], [820, 470], [300, 640]];
+    const spots = [[190, 170], [400, 120], [620, 140], [800, 220], [250, 340], [470, 300], [700, 380], [140, 480], [380, 500], [600, 560], [820, 470], [265, 600]];
     const chosen = [1, 6, 8];
     const clusters = spots.map(([x, y], i) => {
       const el = S.add(`<div class="abs" style="left:${110 + x - 70}px;top:${240 + y - 56}px;width:140px;text-align:center">

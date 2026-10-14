@@ -137,7 +137,7 @@ export default {
       <div class="card" style="flex:1;padding:24px 34px"><div class="row" style="gap:16px"><span class="tag gold">Infinite</span><span class="h3 b">مجتمع غير محدود</span></div><div class="t2 muted">مقدرش أعدّه: النجوم، السمك في المية، الخلايا</div></div>
     </div>`);
     S.stagger([...types.children], 0.3, 0.3, 'fadeUp', 0.6);
-    const ex = S.add(`<div class="abs row t1 b" style="right:130px;top:500px;gap:16px">${ic.bulb({ w: 54 })}<span>مثال بيتسأل عليه كتير: <span class="gold">الأعداد العشرية بين 1 و 2</span></span></div>`);
+    const ex = S.add(`<div class="abs row t1 b" style="right:130px;top:556px;gap:16px">${ic.bulb({ w: 54 })}<span>مثال بيتسأل عليه كتير: <span class="gold">الأعداد العشرية بين 1 و 2</span></span></div>`);
     S.show(ex, t(0.3), 'fadeUp', 0.6);
     const line = S.add(`<div class="abs" style="left:260px;top:800px;width:1400px;height:120px">
       <div style="position:absolute;left:0;right:0;top:18px;height:6px;border-radius:6px;background:var(--navy)"></div>
@@ -148,13 +148,13 @@ export default {
     </div>`);
     S.show(line, t(1.8), 'fade', 0.6);
     const vals = ['1.1', '1.01', '1.001', '1.0001'];
-    const xs = [1420, 1520, 1590, 1630];
+    const xs = [1250, 1420, 1540, 1625];
     vals.forEach((v, i) => {
-      const top = 700 - i * 60;
-      const el = S.add(`<div class="abs tc" style="left:${xs[i] - 80}px;top:${top - 60}px;width:160px"><div class="tag gold num" style="font-size:${36 - i * 2}px;padding:4px 16px">${v}</div><div style="width:3px;height:${818 - top - 4}px;background:var(--gold);margin:0 auto"></div></div>`);
+      const top = i % 2 ? 720 : 646;
+      const el = S.add(`<div class="abs tc" style="left:${xs[i] - 80}px;top:${top}px;width:160px"><div class="tag gold num" style="font-size:32px;padding:2px 14px;line-height:1.4">${v}</div><div style="width:3px;height:${818 - top - 47}px;background:var(--gold);margin:0 auto"></div></div>`);
       S.show(el, t(4.9 + i * 0.9), 'drop', 0.5);
     });
-    const inf = S.add(`<div class="abs row" style="left:260px;top:600px;gap:14px">${ic.infinity({ w: 70, color: C.goldInk })}<span class="t1 b">ومش هتخلص أبدًا… يبقى <span class="gold">غير محدود</span></span></div>`);
+    const inf = S.add(`<div class="abs row" style="left:200px;top:660px;gap:14px">${ic.infinity({ w: 70, color: C.goldInk })}<span class="t1 b">ومش هتخلص أبدًا… يبقى <span class="gold">غير محدود</span></span></div>`);
     S.show(inf, t(8.8), 'fadeUp', 0.6);
   },
 
@@ -168,7 +168,7 @@ export default {
       ['الانحراف المعياري', m('σ'), m('s'), 35.0, 37.0, 38.3],
       ['النسبة', m('P'), m('<span class="hat">p</span>'), 39.0, 40.4, 42.2],
     ];
-    const tbl = S.add(`<div class="abs" style="right:120px;top:236px">
+    const tbl = S.add(`<div class="abs" style="right:120px;top:284px">
       <table class="sym"><tr><th class="name">المقياس</th><th class="p">معلمة المجتمع</th><th class="s">إحصاءة العينة</th></tr>
       ${rows.map(([name, p, s2]) => `<tr><td class="name">${name}</td><td class="p">${p}</td><td class="s">${s2}</td></tr>`).join('')}
       </table></div>`);
@@ -183,7 +183,7 @@ export default {
       S.show(tds[1], t(r[4]), 'pop', 0.5);
       S.show(tds[2], t(r[5]), 'pop', 0.5);
     });
-    const tip = S.add(`<div class="abs col" style="left:130px;width:470px;top:300px;gap:24px">
+    const tip = S.add(`<div class="abs col" style="left:130px;width:470px;top:348px;gap:24px">
       <div class="row t2 b" style="gap:12px">${ic.bulb({ w: 50 })}بص على شكلهم بس:</div>
       <div class="card blue" style="padding:20px 26px"><div class="t2 b blue">المجتمع</div><div class="t2">حروف كابتل أو يوناني</div></div>
       <div class="card gold" style="padding:20px 26px"><div class="t2 b gold">العينة</div><div class="t2">حروف سمول</div></div></div>`);

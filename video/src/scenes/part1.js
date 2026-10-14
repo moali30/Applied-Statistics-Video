@@ -27,7 +27,7 @@ export default {
       const head = S.add(`<div class="abs tc" style="left:0;right:0;top:180px">
         <div class="kicker" style="font-size:30px">SAT301 · الإحصاء التطبيقي</div>
         <div class="h0" style="margin-top:4px">المعاينة</div>
-        <div class="tag navy" style="font-size:40px;padding:8px 46px">سكشن 1</div>
+        <div class="tag navy" style="font-size:40px;padding:8px 46px;margin-top:28px">سكشن 1</div>
       </div>`);
       const [k, h, pill] = head.children;
       S.show(k, 0.6, 'fadeDown', 0.6);
@@ -100,7 +100,7 @@ export default {
     S.show(sd, s1 + 0.6, 'fade', 0.5);
     const spLbl = S.add(`<div class="abs tc" style="left:360px;width:500px;top:830px"><div class="tag gold">معلقة واحدة</div></div>`);
     S.show(spLbl, t(3.4), 'fadeUp', 0.5);
-    const ok1 = S.add(`<div class="abs" style="left:700px;top:330px">${art.check({ w: 100 })}</div>`);
+    const ok1 = S.add(`<div class="abs" style="left:410px;top:420px">${art.check({ w: 100 })}</div>`);
     S.show(ok1, t(4.9), 'pop', 0.5);
     const ok2 = S.add(`<div class="abs" style="left:1540px;top:300px">${art.check({ w: 110 })}</div>`);
     S.show(ok2, t(6.9), 'pop', 0.5);
@@ -184,10 +184,10 @@ export default {
     const world = S.add(`<div class="abs tc t1" style="left:0;right:0;top:850px">كل طلاب الجامعة… أو كل الناس في مصر!</div>`);
     S.show(world, t(11.3), 'fadeUp', 0.5);
     S.hide(world, t(16.8), 'fade', 0.3);
-    const loads = S.add(`<div class="abs row" style="left:600px;top:470px;gap:10px">${ic.clock({ w: 64, color: C.navy })}${ic.effort({ w: 64, color: C.navy })}${ic.cash({ w: 64, color: C.navy })}</div>`);
+    const loads = S.add(`<div class="abs row" style="left:612px;top:522px;gap:6px">${ic.clock({ w: 56, color: C.navy })}${ic.effort({ w: 56, color: C.navy })}${ic.cash({ w: 56, color: C.navy })}</div>`);
     [13.9, 14.9, 15.6].forEach((r, i) => S.show(loads.children[i], t(r), 'drop', 0.6));
     S.anim(loads, tiltAt, 1.4, { y: [0, 70] }, 'out');
-    const light = S.add(`<div class="abs" style="left:1165px;top:430px">${art.spoon({ w: 110 })}</div>`);
+    const light = S.add(`<div class="abs" style="left:1176px;top:498px">${art.spoon({ w: 84 })}</div>`);
     S.show(light, aOut + 0.9, 'drop', 0.6);
     S.anim(light, tiltAt, 1.4, { y: [0, -70] }, 'out');
     const imp = S.add(`<div class="abs tc t1 b" style="left:0;right:0;top:850px">وساعات يبقى <span class="red">مستحيل!</span></div>`);
