@@ -172,12 +172,12 @@ body { font-family: 'Body', 'Tahoma', sans-serif; color: var(--ink); direction: 
 .answer .note { font-size: 36px; font-weight: 500; line-height: 1.55; color: var(--ink); }
 
 /* table, like the deck's symbols slide */
-table.sym { border-collapse: separate; border-spacing: 10px 10px; font-size: 40px; }
+table.sym { border-collapse: separate; border-spacing: 10px 8px; font-size: 38px; }
 table.sym th { padding: 10px 40px; font-size: 34px; font-weight: 700; border-radius: 10px; }
 table.sym th.p { background: var(--navy); color: #fff; }
 table.sym th.s { background: var(--gold-ink); color: #fff; }
 table.sym th.name { color: var(--muted); text-align: right; }
-table.sym td { padding: 8px 40px; text-align: center; border-radius: 10px; }
+table.sym td { padding: 2px 40px; text-align: center; border-radius: 10px; line-height: 1.45; }
 table.sym td.name { text-align: right; background: var(--card); border: 2px solid var(--line); font-weight: 700; min-width: 420px; }
-table.sym td.p { background: var(--blue-soft); color: var(--blue); font-size: 54px; min-width: 300px; }
-table.sym td.s { background: var(--gold-soft); color: var(--gold-ink); font-size: 54px; min-width: 300px; }
+table.sym td.p { background: var(--blue-soft); color: var(--blue); font-size: 48px; min-width: 300px; }
+table.sym td.s { background: var(--gold-soft); color: var(--gold-ink); font-size: 48px; min-width: 300px; }

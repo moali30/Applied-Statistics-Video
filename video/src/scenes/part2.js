@@ -168,7 +168,7 @@ export default {
       ['الانحراف المعياري', m('σ'), m('s'), 35.0, 37.0, 38.3],
       ['النسبة', m('P'), m('<span class="hat">p</span>'), 39.0, 40.4, 42.2],
     ];
-    const tbl = S.add(`<div class="abs" style="right:120px;top:240px">
+    const tbl = S.add(`<div class="abs" style="right:120px;top:236px">
       <table class="sym"><tr><th class="name">المقياس</th><th class="p">معلمة المجتمع</th><th class="s">إحصاءة العينة</th></tr>
       ${rows.map(([name, p, s2]) => `<tr><td class="name">${name}</td><td class="p">${p}</td><td class="s">${s2}</td></tr>`).join('')}
       </table></div>`);
